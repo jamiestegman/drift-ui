@@ -1,0 +1,90 @@
+:root {
+  font-size: 16px;
+  --color-primary: #4166ff;
+  --color-primary-focus: #4166ffaa;
+  --color-primary-hint: #4b48ff20;
+  --color-warning: #dc2627;
+  --color-warning-focus: #dc2627cc;
+  --color-warning-hint: #dc262720;
+  --color-theme: #fff;
+  --color-card: #fff;
+  --color-accent: #f9fafb;
+  --color-title: #101621;
+  --color-label: #28303a;
+  --color-body: #6b7280;
+  --color-hint: #84888f;
+  --color-border: #d1d5db;
+  --color-overlay: rgba(27, 32, 40, 0.6);
+  --color-tooltip: rgba(47, 52, 71, 0.95);
+
+  --font-family: 'Inter var',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+  --radius-md: 0.375rem;
+  --radius-lg: 0.8rem;
+
+  --shadow-hover: 0 0 0 1px var(--color-primary-hint);
+  --shadow-hover-offset: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-primary-hint);
+  --shadow-hover-offset-warning: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-warning-hint);
+
+  --shadow-focus: 0 0 0 1px var(--color-primary-focus);
+  --shadow-focus-input: var(--shadow-focus), var(--shadow-ui);
+  --shadow-focus-offset: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-primary-focus), var(--shadow-focus);
+  --shadow-focus-offset-warning: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-warning-focus), var(--shadow-focus);
+
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-ui: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+
+  --layout-padding: 1.5rem;
+  --layout-margin: 1.5rem;
+  --layout-gap: 0.75rem;
+
+  --transition-fast: 0.1s cubic-bezier(0.4,0,0.2,1);
+  --transition-md: 0.16s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.24s cubic-bezier(0.4,0,0.2,1);
+}
+
+* {
+  font-family: var(--font-family);
+  -webkit-text-size-adjust: 100%;
+  font-family: system-ui,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleFadeIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  } 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleFadeOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  } 100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
