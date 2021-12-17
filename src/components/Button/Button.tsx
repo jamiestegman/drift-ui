@@ -31,21 +31,18 @@ export const Button = styled.button<Props>`
   line-height: 1.25rem;
   font-size: .875rem;
   box-shadow: var(--shadow-ui);
-  transition: var(--transition-fast);
+  transition: var(--transition-slow);
 
   &:hover {
     box-shadow: ${props =>
       props.warning ? 'var(--shadow-hover-offset-warning)' :
       'var(--shadow-hover-offset)'};
+      transition: none;
   }
 
   &:focus {
     box-shadow: ${props =>
       props.warning ? 'var(--shadow-focus-offset-warning)' :
       'var(--shadow-focus-offset)'};
-  }
-
-  & + button {
-    margin-left: var(--layout-gap);
   }
 `

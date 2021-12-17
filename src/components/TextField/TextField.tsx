@@ -42,7 +42,7 @@ const Input = styled.input`
 const HelperText = styled.p`
   color: var(--color-hint);
   margin-top: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 `
 
 interface Props {
