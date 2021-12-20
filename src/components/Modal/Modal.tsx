@@ -69,7 +69,6 @@ const Title = styled.h3`
 `
 
 const Body = styled.p`
-  color: var(--color-body);
   font-size: 0.875rem;
 `
 
