@@ -7,27 +7,34 @@ import { TextField } from './components/TextField/TextField'
 import { Modal } from './components/Modal/Modal'
 import { Tooltip } from './components/Tooltip/Tooltip';
 
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--layout-margin);
+  height: var(--header-height);
+`
+
 const Container = styled.div`
   display: flex;
   align-items: center;
-  padding: 4vw;
-  background-color: #f3f4f6;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  padding: var(--layout-margin);
+  padding-top: 0;
 `
 
 const Navigation = styled.nav`
-  justify-self: flex-start;
   display: flex;
   align-items: center;
-  height: 70%;
+  height: 100%;
+  margin-right: var(--layout-margin);
 
   & > div {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 999px;
+    justify-content: flex-start;
   }
 
   & button + button {
@@ -38,9 +45,9 @@ const Navigation = styled.nav`
 const Main = styled.main`
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--layout-margin);
 `
 
 function App() {
@@ -56,8 +63,13 @@ function App() {
   }
 
   return (
-    <Container>
+    <>
+    <Header>
+      <div>Logo</div>
+      <div>User controls</div>
+    </Header>
 
+    <Container>
       <Navigation>
         <Card stack>
           <Button primary>Click</Button>
@@ -68,27 +80,66 @@ function App() {
       </Navigation>
 
       <Main>
-      <Card>
-        <Button onClick={() => setIsDeactivateModalOpen(true)}>Edit</Button>
-        <Button primary>Save</Button>
-        <Button warning>Cancel</Button>
-        <Tooltip text="Cancel Button" position="top">
-          <div style={{width: '300px', height: '300px', backgroundColor: 'rgba(0,0,0,0.03)'}}></div>
-        </Tooltip>
-        <TextField
-          id="name"
-          hint="We'll never share your email address with anyone.">
-          Email
-        </TextField>
-        <Modal
-          isOpen={isDeactivateModalOpen}
-          setIsOpen={setIsDeactivateModalOpen}
-          shouldRender={shouldRender}
-          data={deactivateModalProps} />
-      </Card>
+        <Card>
+          <Button onClick={() => setIsDeactivateModalOpen(true)}>Edit</Button>
+          <Button primary>Save</Button>
+          <Button warning>Cancel</Button>
+          <Tooltip text="Cancel Button" position="top">
+            <div style={{width: '300px', height: '300px', backgroundColor: 'rgba(0,0,0,0.03)'}}></div>
+          </Tooltip>
+          <TextField
+            id="name"
+            hint="We'll never share your email address with anyone.">
+            Email
+          </TextField>
+          <Modal
+            isOpen={isDeactivateModalOpen}
+            setIsOpen={setIsDeactivateModalOpen}
+            shouldRender={shouldRender}
+            data={deactivateModalProps} />
+        </Card>
+
+        <Card>
+          <Button onClick={() => setIsDeactivateModalOpen(true)}>Edit</Button>
+          <Button primary>Save</Button>
+          <Button warning>Cancel</Button>
+          <Tooltip text="Cancel Button" position="top">
+            <div style={{width: '300px', height: '300px', backgroundColor: 'rgba(0,0,0,0.03)'}}></div>
+          </Tooltip>
+          <TextField
+            id="name"
+            hint="We'll never share your email address with anyone.">
+            Email
+          </TextField>
+          <Modal
+            isOpen={isDeactivateModalOpen}
+            setIsOpen={setIsDeactivateModalOpen}
+            shouldRender={shouldRender}
+            data={deactivateModalProps} />
+        </Card>
+
+        <Card>
+          <Button onClick={() => setIsDeactivateModalOpen(true)}>Edit</Button>
+          <Button primary>Save</Button>
+          <Button warning>Cancel</Button>
+          <Tooltip text="Cancel Button" position="top">
+            <div style={{width: '300px', height: '300px', backgroundColor: 'rgba(0,0,0,0.03)'}}></div>
+          </Tooltip>
+          <TextField
+            id="name"
+            hint="We'll never share your email address with anyone.">
+            Email
+          </TextField>
+          <Modal
+            isOpen={isDeactivateModalOpen}
+            setIsOpen={setIsDeactivateModalOpen}
+            shouldRender={shouldRender}
+            data={deactivateModalProps} />
+        </Card>
       </Main>
 
     </Container>
+    </>
   );
 }
 

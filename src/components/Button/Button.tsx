@@ -9,6 +9,7 @@ export const Button = styled.button<Props>`
   border: none;
   outline: none;
   position: relative;
+  min-width: 4.5rem;
 
   background-color: ${props =>
     props.primary ? 'var(--color-primary)' :

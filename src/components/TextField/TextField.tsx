@@ -18,6 +18,7 @@ const Input = styled.input`
   -moz-appearance: none;
   appearance: none;
   width: 100%;
+  min-width: 10rem;
   background-color: var(--color-card);
   border: solid 1px var(--color-border);
   border-radius: var(--radius-md);

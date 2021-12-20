@@ -11,7 +11,7 @@
   --color-accent: #f9fafb;
   --color-title: #101621;
   --color-label: #28303a;
-  --color-body: #6b7280;
+  --color-body: #f8f8f9;
   --color-hint: #84888f;
   --color-border: #d1d5db;
   --color-overlay: rgba(27, 32, 40, 0.6);
@@ -31,13 +31,15 @@
   --shadow-focus-offset: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-primary-focus), var(--shadow-focus);
   --shadow-focus-offset-warning: 0 0 0 2px var(--color-theme), 0 0 0 4px var(--color-warning-focus), var(--shadow-focus);
 
-  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-card: rgb(46 41 51 / 8%) 0px 1px 2px, rgb(71 63 79 / 8%) 0px 2px 4px;
   --shadow-ui: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   --shadow-modal: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
 
   --layout-padding: 1.5rem;
-  --layout-margin: 1.5rem;
+  --layout-margin: 3rem;
   --layout-gap: 0.75rem;
+
+  --header-height: calc(var(--layout-margin) * 1.5);
 
   --transition-fast: 0.1s cubic-bezier(0.4,0,0.2,1);
   --transition-md: 0.16s cubic-bezier(0.4,0,0.2,1);
@@ -51,6 +53,10 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-body);
 }
 
 @keyframes fadeIn {
