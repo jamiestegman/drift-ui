@@ -39,7 +39,7 @@
   --layout-margin: 3rem;
   --layout-gap: 0.75rem;
 
-  --header-height: calc(var(--layout-margin) * 1.5);
+  --header-height: 5rem;
 
   --transition-fast: 0.1s cubic-bezier(0.4,0,0.2,1);
   --transition-md: 0.16s cubic-bezier(0.4,0,0.2,1);
